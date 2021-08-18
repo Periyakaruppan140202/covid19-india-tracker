@@ -31,14 +31,14 @@ const State = () => {
   }
   return (
     <>
-      <marquee behavior="" direction="left">
+      {/* <marquee behavior="" direction="left">
         ***
         <b>
           The data reperesented here is last updated on 13th August 2021 (23 Hrs
           27 Mins 22 Sec)
         </b>
         ***
-      </marquee>
+      </marquee> */}
       <section>
         <input
           type="text"

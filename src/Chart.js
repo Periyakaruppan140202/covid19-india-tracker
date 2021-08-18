@@ -90,14 +90,14 @@ const Chart = () => {
         Deceased
       </button> */}
       {/* {$(".chart").width($("marquee").width());} */}
-      <marquee behavior="" direction="left">
+      {/* <marquee behavior="" direction="left">
         ***
         <b>
           The data reperesented here is last updated on 13th August 2021 (23 Hrs
           27 Mins 22 Sec)
         </b>
         ***
-      </marquee>
+      </marquee> */}
       <div className="selection">
         <label for="dataChange">Select to Display any Cases: </label>
         <select

@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import { Line } from "react-chartjs-2";
 import { useFetch } from "./useFetch";
 import { Link } from "react-router-dom";
+import { data } from "./data";
 
 const Chart = () => {
   let labelX = [],
@@ -26,12 +27,12 @@ const Chart = () => {
     },
   ];
 
-  const url = "https://api.covid19india.org/data.json";
+  const url = "https://data.covid19india.org/data.json/";
   const [dataChange, setDataChange] = useState(0);
-  const funcFetch = async () => {
-    const res = await fetch(url);
-    const data = await res.json();
-    await data.cases_time_series.map((item) => {
+  const funcFetch = () => {
+    // const res = await fetch(url);
+    // const data = await res.json();
+    data.cases_time_series.map((item) => {
       labelX.push(item.date);
       labelConfirmed.push(item.dailyconfirmed);
       labelRecovered.push(item.dailyrecovered);
@@ -88,6 +89,15 @@ const Chart = () => {
       >
         Deceased
       </button> */}
+      {/* {$(".chart").width($("marquee").width());} */}
+      <marquee behavior="" direction="left">
+        ***
+        <b>
+          The data reperesented here is last updated on 13th August 2021 (23 Hrs
+          27 Mins 22 Sec)
+        </b>
+        ***
+      </marquee>
       <div className="selection">
         <label for="dataChange">Select to Display any Cases: </label>
         <select
